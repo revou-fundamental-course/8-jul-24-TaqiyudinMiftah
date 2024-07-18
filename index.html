@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Kalkulator BMI</h1>
+    <article id="penjelasan">Berat badan ideal memang menjadi impian bagi banyak orang karena berhubungan langsung dengan kesehatan dan kesejahteraan secara keseluruhan. </article>
+    <div class="container">
+        <div class="left">
+            <form id="bmiForm" onsubmit="return calculateBMI()">
+                <h2>Jenis Kelamin</h2>
+                <label>
+                    <input type="radio" name="gender" value="pria" required> pria
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="wanita" required> Wanita
+                </label>
+                <div class="form-group">
+                    <label for="weight">Berat Badan(Kg)</label>
+                    <input type="text" id="weight" name="weight" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">Usia (tahun)</label>
+                    <input type="text" id="age" name="age" required>
+                </div>
+                <div class="form-group">
+                    <label for="height">Tinggi badan (cm)</label>
+                    <input type="text" id="height" name="height" required>
+                </div>
+                <div class="buttons">
+                    <button type="submit">Hitung BMI</button>
+                    <button type="reset" onclick="resetForm()">Reset</button>
+                </div>
+            </form>
+        </div>
+        <div class="right" style="display: none;">
+            <div class="result">
+                <h2>Hasil</h2>
+                <div class="bmi-result">
+                    <h3>24.7</h3>
+                    <p>Anda memiliki berat badan berlebih</p>
+                    <button type="button">Download Hasil BMI</button>
+                </div>
+            </div>
+            <p class="hasil">Hasil BMI diantara 23 dan 25</p>
+            <article>Anda berada dalam kategori overweight atau berat badan berlebih, yang berisiko terkena beberapa penyakit serius seperti diabetes, hipertensi, sakit jantung, dan osteoartritis. Cara terbaik untuk mengatasi overweight adalah dengan mengadopsi pola makan seimbang yang mengandung lebih sedikit kalori daripada yang Anda bakar, serta meningkatkan aktivitas fisik. Hindari makanan olahan, gula tambahan, dan lemak jenuh. Gantilah dengan lebih banyak sayur-sayuran, buah-buahan, sumber protein tanpa lemak, dan biji-bijian utuh. Olahraga teratur seperti berjalan cepat, bersepeda, atau berenang juga dapat membantu membakar kalori lebih banyak. Konsultasikan dengan dokter atau ahli gizi untuk mendapatkan rekomendasi yang sesuai dengan kebutuhan tubuh Anda.</article>
+            <div class="result">
+                <h3>Beberapa penyakit yang berasal dari kegemukan</h3>
+                <ul>
+                    <ul>Diabetes</ul>
+                    <ul>Hipertensi</ul>
+                    <ul>Sakit Jantung</ul>
+                    <ul>Osteoartritis</ul>
+                </ul>
+                <button type="button">Konsultasi Dokter Via Aplikasi</button>
+                <button type="button">Registrasi Online Sekarang</button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
